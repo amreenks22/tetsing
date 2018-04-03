@@ -89,3 +89,8 @@ function onChange(control, oldValue, newValue, isLoading) {
 	}
 	
 }
+if (var == 'howdy') {...} 
+if(unexpectedCondition) {
+  alert("Unexpected Condition");
+}
+		     var b = a.reverse();
