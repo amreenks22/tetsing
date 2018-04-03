@@ -236,10 +236,28 @@
         <version>${slf4j.version}</version>
         <scope>provided</scope>
       </dependency>
+      
+      <dependency>
+    <groupId>com</groupId>
+    <artifactId>sonar-javascript-plugin</artifactId>
+    <version>4.0.0.5862</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/sonarqube-7.0/sonarqube-7.0/extensions/plugins</systemPath>
+</dependency>
+      
+      
 
     </dependencies>
+    
   </dependencyManagement>
-
+<build>
+    <resources>
+        <resource>
+            <directory>/sonarqube-7.0/sonarqube-7.0/web/js</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+</build>
   <profiles>
     <profile>
       <id>its</id>
