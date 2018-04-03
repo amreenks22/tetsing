@@ -12,6 +12,15 @@ function onChange(control, oldValue, newValue, isLoading) {
         favoriteColors: ["blue","purple","raspberry"]
     }
 });
+		function foo() {
+  let x = bar(1);
+  if (x > 0) {
+      let x = bar(2); // Noncompliant
+      console.log(x);
+  } else {
+     console.log("Wrong Value");
+  }
+}
 		
 		g_form.setVisible('api_module', true);
 		
