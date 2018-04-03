@@ -6,6 +6,12 @@ function onChange(control, oldValue, newValue, isLoading) {
 	//Type appropriate comment here, and begin script below
 	
 	if ((newValue == "New Account Request") || (newValue == "Update to an existing account")) {
+		var Person = Backbone.Model.extend({
+		
+		    defaults: {  // Noncompliant; every instance of Person will share the same instance of favoriteColors
+        favoriteColors: ["blue","purple","raspberry"]
+    }
+});
 		
 		g_form.setVisible('api_module', true);
 		
