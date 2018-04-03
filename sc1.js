@@ -12,6 +12,25 @@ function onChange(control, oldValue, newValue, isLoading) {
         favoriteColors: ["blue","purple","raspberry"]
     }
 });
+		for (i = 0; i < 10; i++) {
+    if (i == 5) {
+      continue;  /* Noncompliant */
+    }
+    alert("i = " + i);
+  }
+		function compute(a, a, c) { // Noncompliant
+}
+		NullCipher nc=new NullCipher();
+		switch a {
+  case 1,2:  // Noncompliant; only 2 is ever handled by this case
+    doTheThing(a);
+  case 3 || 4: // Noncompliant; only '3' is handled
+    doThatThing(a);
+  case 5:
+    doTheOtherThing(a);
+  default:
+    console.log("Neener, neener!");  // this happens when a==1 or a == 4
+}
 		
 		g_form.setVisible('api_module', true);
 		
