@@ -13,7 +13,12 @@ function onChange(control, oldValue, newValue, isLoading) {
     }
 });
 		function foo() {
+			var myArray = ['a', 'b', 'c', 'd'];
+
+delete myArray[2];  // Noncompliant. myArray => ['a', 'b', undefined, 'd']
+console.log(myArray[2]); 
   let x = bar(1);
+		
   if (x > 0) {
       let x = bar(2); // Noncompliant
       console.log(x);
@@ -21,6 +26,7 @@ function onChange(control, oldValue, newValue, isLoading) {
      console.log("Wrong Value");
   }
 }
+		
 		
 		g_form.setVisible('api_module', true);
 		
