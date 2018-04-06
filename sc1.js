@@ -22,6 +22,10 @@ console.log(myArray[2]);
   if (x > 0) {
       let x = bar(2); // Noncompliant
       console.log(x);
+	  var a=3
+	  if(a=4){
+		  a=a+1;
+	  }
   } else {
      console.log("Wrong Value");
   }
