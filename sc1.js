@@ -4,7 +4,11 @@ function onChange(control, oldValue, newValue, isLoading) {
 	}
 	
 	//Type appropriate comment here, and begin script below
-	
+	var b = a.reverse();
+	for (i = 0; i < 10; j++) {  // Noncompliant
+  // ...
+  i++;
+}
 	
 		
 		g_form.setVisible('api_module', true);
